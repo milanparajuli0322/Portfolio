@@ -173,7 +173,7 @@
 
     .bubble {
       position: absolute;
-      top: 0;
+      top: 50px; /* Changed from 0 to 50px to push it down */
       left: 50%;
       transform: translateX(-50%);
       width: min(340px, 92%);
@@ -340,12 +340,30 @@
         opacity: 1;
       }
     }
+
+    .holo-title {
+        position: absolute;
+        top: 2vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font: 800 clamp(3rem, 6vw, 5rem)/1 Sora, sans-serif;
+        color: #ffffff;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 10;
+        opacity: 0;
+        animation: fade 1.4s .2s forwards;
+    }
   </style>
 </head>
 
 <body>
   <canvas id="cv" aria-hidden="true"></canvas>
   <div class="scan"></div>
+  <h1 class="holo-title">PORTFOLIO</h1>
 
   <div class="zoom-container">
     <main>
